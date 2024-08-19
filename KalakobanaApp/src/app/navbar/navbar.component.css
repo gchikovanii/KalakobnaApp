@@ -4,3 +4,16 @@
     background: linear-gradient(135deg, #1F0036, #0c0112);
 }
   
+a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+a:hover {
+  transform: rotate(25deg); 
+}
+.hub-text:hover{
+    transform: rotate(-25deg)!important; 
+}

@@ -18,7 +18,11 @@ export class NavbarComponent {
   toggleProfileMenu() {
     this.profileMenu = !this.profileMenu;
     console.log(this.profileMenu);
-
   }
-
+  login(){
+    this.loggedIn.set(true);
+  }
+  logOut(){
+    this.loggedIn.set(false);
+  }
 }

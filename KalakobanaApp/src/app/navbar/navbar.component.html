@@ -1,9 +1,9 @@
 <header>
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-4" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+          <img class="h-8 w-auto" style="height: 90px; width: auto;" src="logo.png" alt="">
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -17,13 +17,13 @@
         }
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm font-semibold leading-6 text-white">Features</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-white">Company</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-white main-text">MAIN</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-white hub-text">GAME HUB</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-white contact-text">CONTACT</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         @if(!loggedIn()){
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white" (click)="login()">Log in <span aria-hidden="true">&rarr;</span></a>
             }
         
        @if(loggedIn()){
@@ -36,7 +36,7 @@
               @if(profileMenu){
                 <div  class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Log Out</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" (click)="logOut()">Log Out</a>
                   </div>
               }
             </div>
@@ -54,7 +54,6 @@
               <div class="flex items-center justify-between">
                 <a href="#" class="-m-1.5 p-1.5">
                   <span class="sr-only">Your Company</span>
-                  <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
                 </a>
                 <button (click)="toggleMenu()"  type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                   <span class="sr-only">Close menu</span>
@@ -72,11 +71,11 @@
                   </div>
                   <div class="py-6">
                     @if(!loggedIn()){
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50">Log in</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50" (click)="login()">Log in</a>
                     }
                    @if(loggedIn()){
                         <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50">Profile</a>
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50">Log Out</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50" (click)="logOut()">Log Out</a>
                     }
                   </div>
                 </div>

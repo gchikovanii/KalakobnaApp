@@ -1,7 +1,7 @@
 :host {
     display: block;
     height: 100vh; 
-    background: linear-gradient(135deg, #1F0036, #0c0112);
+    background: linear-gradient(135deg, #10001d, #0c0112);
 }
   
 a {
@@ -11,9 +11,28 @@ a {
     font-size: 1rem;
     transition: transform 0.3s ease;
 }
+.nav-text-sm:hover{
+  transform: scale(0.95) translateX(5px) !important; 
+}
 a:hover {
   transform: rotate(25deg); 
 }
 .hub-text:hover{
     transform: rotate(-25deg)!important; 
 }
+.zoom-in {
+    transition: transform 0.3s ease, color 0.3s ease!important;
+    transform: scale(1)!important; 
+  }
+  
+  .zoom-in:hover {
+    transform: scale(0.9)!important; 
+  }
+.zoom-out {
+    transition: transform 0.3s ease, color 0.3s ease!important;
+    transform: scale(1)!important; 
+  }
+  
+  .zoom-out:hover {
+    transform: scale(1.2)!important; 
+  }

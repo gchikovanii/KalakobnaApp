@@ -8,19 +8,19 @@ import { Component, ElementRef, EventEmitter, HostListener, Output, signal } fro
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  isMenuOpen = false;
+  isMenuOpen = signal(false);
   loggedIn = signal(false);
   profileMenu = false;
 
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+    this.isMenuOpen.set(!this.isMenuOpen());
   }
   toggleProfileMenu() {
     this.profileMenu = !this.profileMenu;
   }
   login() {
     this.loggedIn.set(true);
-    this.isMenuOpen = false;
+    this.isMenuOpen.set(false);
   }
   logOut() {
     this.loggedIn.set(false);

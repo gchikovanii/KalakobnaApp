@@ -1,0 +1,16 @@
+  .custom-button {
+    background-color: transparent; 
+    border: 1px solid #4c026d; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.custom-button:hover {
+    background-color: #1F0027;
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.custom-button:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px rgba(76, 2, 109, 0.5); 
+}

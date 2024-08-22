@@ -14,7 +14,7 @@ import { TeamComponent } from "./team/team.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, NavbarComponent, HeroComponent, NewsletterComponent, FooterComponent, PlusesComponent, AboutUsComponent, TechnologyComponent, TeamComponent]
+    imports: [RouterOutlet, NavbarComponent, HeroComponent, NewsletterComponent, FooterComponent, PlusesComponent, AboutUsComponent, TechnologyComponent, TeamComponent],
 })
 export class AppComponent {
   title = 'KalakobanaApp';

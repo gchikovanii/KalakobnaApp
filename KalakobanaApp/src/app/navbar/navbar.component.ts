@@ -1,13 +1,14 @@
 import { Component, ElementRef, EventEmitter, HostListener, Output, signal } from '@angular/core';
 import { HeroComponent } from "../hero/hero.component";
 import { NewsletterComponent } from "../newsletter/newsletter.component";
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
     standalone: true,
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.css',
-    imports: [HeroComponent, NewsletterComponent]
+    imports: [HeroComponent, NewsletterComponent, RouterModule]
 })
 export class NavbarComponent {
   isMenuOpen = signal(false);

@@ -27,9 +27,9 @@
     </div>
 
     <div class="hidden lg:flex lg:gap-x-12">
-      <a routerLink="/" class="text-sm font-semibold leading-6 text-white">MAIN</a>
-      <a routerLink="/game-hub" class="text-sm font-semibold leading-6 text-white hub-text">GAME HUB</a>
-      <a routerLink="/contact" routerLinkActive="router-link-active"  class="text-sm font-semibold leading-6 text-white">CONTACT</a>
+      <a routerLink="/" class="text-sm font-semibold leading-6 text-white">{{'Header.Main' | translate}}</a>
+      <a routerLink="/game-hub" class="text-sm font-semibold leading-6 text-white hub-text">{{'Header.GameHub' | translate}}</a>
+      <a routerLink="/contact" routerLinkActive="router-link-active"  class="text-sm font-semibold leading-6 text-white">{{'Header.Contact' | translate}}</a>
     </div>
 
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -92,26 +92,44 @@
         <div class="mt-12 flow-root">
           <div class="-my-6 divide-y divide-white-500/10">
             <div class="space-y-2 py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">MAIN</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">GAME HUB</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">CONTACT</a>
+              <a routerLink="/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">{{'Header.Main' | translate}}</a>
+              <a routerLink="/game-hub" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">{{'Header.GameHub' | translate}}</a>
+              <a routerLink="/contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">{{'Header.Contact' | translate}}</a>
             </div>
             <div class="py-6">
               <div class="flex justify-between items-center">
                 <!-- Other header content -->
-                <div>
-                  <div class="flex items-center space-x-4">
-                    <button 
-                      (click)="switchLanguage('ka')" 
-                      class="px-3 py-1 rounded text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                      KA
-                    </button>
-                    <button 
-                      (click)="switchLanguage('en')" 
-                      class="px-3 py-1 rounded text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                      EN
-                    </button>
+                <div class="relative" (clickOutside)="closeDropdown()">
+                  <button 
+                    id="languageDropdownButton"
+                    class="px-4 py-2 bg-indigo-800 text-white rounded-full hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-lg"
+                    (click)="toggleDropdown()">
+                    {{ savedLanguage() }}
+                    <svg class="w-4 h-4 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+                 @if(dropdownOpen){
+                  <div 
+                    class="absolute mt-2 w-40 bg-indigo-800 text-white rounded-md shadow-lg z-10" style="cursor: pointer;">
+                    <ul class="py-1">
+                      <li>
+                        <a 
+                          (click)="switchLanguage('ka')" 
+                          class="block px-4 py-2 hover:bg-indigo-900">
+                          KA - ქართული
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          (click)="switchLanguage('en')" 
+                          class="block px-4 py-2 hover:bg-indigo-900">
+                          EN - English
+                        </a>
+                      </li>
+                    </ul>
                   </div>
+                 }
                 </div>
               </div>
 

@@ -1,5 +1,7 @@
 {
-    "Boom": {
-        "bomyl": "Boom yleo"
+    "Header": {
+        "Main": "MAIN",
+        "GameHub": "GAME HUB",
+        "Contact": "CONTACT"
     }
 }

@@ -19,19 +19,4 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
       TranslateModule,TeamComponent],
 })
 export class AppComponent {
-  title = 'KalakobanaApp';
-
-  constructor(private translate: TranslateService) {
-    const savedLanguage = localStorage.getItem('language');
-    const defaultLanguage = savedLanguage ? savedLanguage : 'ka';
-    translate.setDefaultLang(defaultLanguage);
-    translate.use(defaultLanguage);
-  }
-
-  switchLanguage(lang: string) {
-    this.translate.use(lang).subscribe(() => {
-      localStorage.setItem('language', lang);
-    });
-  }
-
 }

@@ -44,7 +44,7 @@ export class NavbarComponent {
     const target = event.target as HTMLElement;
     const isDropdownButton = target.closest('#languageDropdownButton');
     if (!isDropdownButton) {
-      this.closeDropdown(); // Close dropdown if clicking outside
+      this.closeDropdown();
     }
   }
 

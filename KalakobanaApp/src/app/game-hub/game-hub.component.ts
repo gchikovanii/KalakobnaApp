@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
+import { trigger, style, animate, transition, keyframes } from '@angular/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-game-hub',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './game-hub.component.html',
   styleUrl: './game-hub.component.css',
   animations: [

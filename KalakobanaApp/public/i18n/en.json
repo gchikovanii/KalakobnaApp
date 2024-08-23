@@ -22,5 +22,15 @@
         "sendMessage": "Send Message",
         "tbilisi": "Tbilisi, Georgia",
         "street": "Isani-Samgori, 128 Kavtaradze street"
+    },
+    "GameHub":{
+        "GameHub":"Welcome to the Game Hub",
+        "Expl":"Explore our latest games! Click on any game below to start playing or discover upcoming releases. Stay tuned for more exciting adventures.",
+        "Kalakobana":"Kalakobana",
+        "DiveInto": "Dive into the adventure of Kalakoabana, a thrilling game filled with mysteries and challenges.",
+        "Play": "Play Now",
+        "Conq": "Conquer the World",
+        "ComingSoon": "Coming Soon... Stay tuned for the next exciting game release!",
+        "Locked": "Locked"
     }
 }

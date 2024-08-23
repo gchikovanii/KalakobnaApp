@@ -9,14 +9,22 @@ import { AboutUsComponent } from "./about-us/about-us.component";
 import { TechnologyComponent } from "./technology/technology.component";
 import { TeamComponent } from "./team/team.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LoaderComponent } from "./loader/loader.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, NavbarComponent, HeroComponent, NewsletterComponent, FooterComponent, PlusesComponent, AboutUsComponent, TechnologyComponent, 
-      TranslateModule,TeamComponent],
+    imports: [RouterOutlet, NavbarComponent, HeroComponent, NewsletterComponent, FooterComponent, PlusesComponent, AboutUsComponent, TechnologyComponent,
+        TranslateModule, TeamComponent, LoaderComponent]
 })
 export class AppComponent {
+  isLoading = true;
+
+  constructor() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000); 
+  }
 }

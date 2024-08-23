@@ -3,5 +3,24 @@
         "Main": "MAIN",
         "GameHub": "GAME HUB",
         "Contact": "CONTACT"
+    },
+    "Contact":{
+        "Contact": "Contact",
+        "GetIn": "Get in Touch",
+        "adm": "Sincerely, Wise Buzzer Administration",
+        "cont": "Feel free to reach out to us anytime if you have any questions or need further information. We are here to assist you with anything you need.",
+        "address": "Our Address",
+        "Mobile": "Mobile",
+        "Em": "Email",
+        "WorkingHours": "Working hours",
+        "MonFri": "Monday - Friday",
+        "SS": "Saturday & Sunday",
+        "Ready": "Ready to Get Started?",
+        "name": "Your name",
+        "email": "Your email address",
+        "writeMessage": "Write your message...",
+        "sendMessage": "Send Message",
+        "tbilisi": "Tbilisi, Georgia",
+        "street": "Isani-Samgori, 128 Kavtaradze street"
     }
 }

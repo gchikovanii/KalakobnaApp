@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAreaChart, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons';
 import { trigger, style, animate, transition, keyframes } from '@angular/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
   animations: [

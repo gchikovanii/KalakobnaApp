@@ -32,5 +32,9 @@
         "Conq": "Conquer the World",
         "ComingSoon": "Coming Soon... Stay tuned for the next exciting game release!",
         "Locked": "Locked"
+    },
+    "NotFound": {
+        "NotFound": "Page Not Found",
+        "BackToHome": "Back to Home"
     }
 }

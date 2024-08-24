@@ -1,1 +1,1 @@
-# KalakobnaApp
+# WiseBuzzer App

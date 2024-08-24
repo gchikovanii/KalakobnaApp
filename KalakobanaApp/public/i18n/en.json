@@ -41,5 +41,56 @@
         "Email":"Email must be in correct format",
         "Name": "Name cannot be empty",
         "Message": "Message cannot be empty!"
+    },
+    "Hero":{
+        "Leading":"Leading company",
+        "Buzzing":"Buzzing for your pleasure from the heart of Tbilisi, Georgia, where tradition meets innovation. We are creating historical games that blend education with fun, leveling up the learning experience for everyone.",
+        "Collaborate": "Collaborate",
+        "Explore":"Explore Games"
+    },
+    "Pluses":{
+        "Best":"Why are we the best?",
+        "UL":"We Build a ProJects That our users Love",
+        "OT":"Our templates allow for maximum customization. No technical skills required – our intuitive design tools let you get the job done easily.",
+        "FL":"Flexible",
+        "FLT":"We are using modern approaches which are implemented in businesses around 20 years ago and its it!",
+        "FP":"Fast Performance",
+        "FPT":"We build our templates for speed in mind, for super-fast load times so your customers never waver",
+        "FF":"Fully Featured",
+        "FFT":"Everything you need to succeed and launch your landing page, right out of the box. No need to install anything else."
+    },
+    "AboutUs":{
+        "HWS":"How we started? What is the idea behind Wise Buzzer?",
+        "ShowMore": "Show More",
+        "ShowLess": "Show Less",
+        "ShortText": "Through collaboration, diverse perspectives and strengths are leveraged to create inclusive environments where everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement but also strengthens the fabric of society...",
+        "fullText": "Through collaboration, diverse perspectives and strengths are leveraged to create inclusive environments where everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement but also strengthens the fabric of society."
+    },
+    "Tech":{
+        "T":"Technologies",
+        "TD":"The reason we have high scalable games is because we use modern monster technology stacks, they are reliable and beasts.",
+        "Angular": "Monster in web development.",
+        "Net":"We use .NET Stack for back-end development.",
+        "Flutter":"Cross platform mobile language.",
+        "DB":"We use both RMDBS and No Sql.",
+        "SS":"We use High standard of security.",
+        "Azure":"We use Azure hosting."
+    },
+    "Crew":{
+        "OC":"Our Crew Captains",
+        "OCT":"The heart of company on which the whole idea stands",
+        "GC": "Giorgi Chikovani",
+        "GCT":"Giorgi drives the technical strategy of the Wise Buzzer platform and Tenchnology Stack.",
+        "LJ": "Luka Jolokhava",
+        "LJT":"Luka drives the technical strategy of the Wise Buzzer platform and brand."
+    },
+    "NewsLetter":{
+        "S": "Sign up for our newsletter",
+        "STE": "Stay up to date with the roadmap progress, announcements and exclusive informations.  Feel free to sign up with your email.",
+        "EA":"Email address",
+        "EYA":"Enter your email",
+        "Subscribe": "Subscribe",
+        "Prot":"We care about the protection of your data.",
+        "PP":"Read our Privacy Policy"
     }
 }

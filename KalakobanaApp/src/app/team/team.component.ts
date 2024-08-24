@@ -2,11 +2,12 @@ import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faFacebook, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-team',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, TranslateModule],
   templateUrl: './team.component.html',
   styleUrl: './team.component.css',
   animations: [

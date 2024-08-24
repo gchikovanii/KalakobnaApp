@@ -1,10 +1,11 @@
 import { Component ,ElementRef, HostListener, inject,} from '@angular/core';
 import { trigger, style, animate, transition, keyframes } from '@angular/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-technology',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './technology.component.html',
   styleUrl: './technology.component.css',
   animations: [

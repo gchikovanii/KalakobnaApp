@@ -1,9 +1,9 @@
-import { Component, ElementRef, HostListener, inject } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-pluses',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './pluses.component.html',
   styleUrl: './pluses.component.css',
 })

@@ -1,0 +1,21 @@
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #27187e; /* Indigo color */
+  color: white;
+  border: none;
+  border-radius: 30%;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 22px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #21004B; /* Darker indigo on hover */
+  transform: scale(1.1); /* Slightly enlarge the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}

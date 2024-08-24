@@ -10,6 +10,7 @@ import { TechnologyComponent } from "./technology/technology.component";
 import { TeamComponent } from "./team/team.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { LoaderComponent } from "./loader/loader.component";
+import { ScrollToTopComponent } from "./scroll-to-top/scroll-to-top.component";
 
 @Component({
     selector: 'app-root',
@@ -17,7 +18,7 @@ import { LoaderComponent } from "./loader/loader.component";
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [RouterOutlet, NavbarComponent, HeroComponent, NewsletterComponent, FooterComponent, PlusesComponent, AboutUsComponent, TechnologyComponent,
-        TranslateModule, TeamComponent, LoaderComponent]
+    TranslateModule, TeamComponent, LoaderComponent, ScrollToTopComponent]
 })
 export class AppComponent {
   isLoading = true;

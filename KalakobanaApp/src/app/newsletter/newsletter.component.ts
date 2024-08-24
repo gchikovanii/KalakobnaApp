@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Router, RouterModule } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -12,16 +12,15 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './newsletter.component.html',
   styleUrl: './newsletter.component.css',
   animations: [
-    trigger('fadeIn', [
-      state('void', style({ opacity: 0 })),
+    trigger('flipIn', [
       transition(':enter', [
-        animate('1s ease-in', style({ opacity: 1 }))
+        style({ opacity: 0, transform: 'rotateY(90deg)' }), // Start hidden with a 90-degree rotation
+        animate('800ms ease-out', style({ opacity: 1, transform: 'rotateY(0deg)' })) // End fully visible with no rotation
       ])
     ])
   ],
 })
 export class NewsletterComponent {
-
     router = inject(Router);
     toastr = inject(ToastrService);
     onClick(){
@@ -57,6 +56,19 @@ export class NewsletterComponent {
         timeOut: 3000,
         positionClass: 'toast-bottom-right'
       });
+    }
+  }
+  isVisible = false;
+
+  constructor(private el: ElementRef) {}
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const rect = this.el.nativeElement.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    if (rect.top <= windowHeight && rect.bottom >= 0) {
+      this.isVisible = true;
     }
   }
 }

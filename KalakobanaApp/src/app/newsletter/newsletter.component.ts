@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Router, RouterModule } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-newsletter',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, ReactiveFormsModule, TranslateModule],
   templateUrl: './newsletter.component.html',
   styleUrl: './newsletter.component.css',
   animations: [
@@ -19,9 +22,41 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class NewsletterComponent {
 
-
-    constructor(private router: Router){}
+    router = inject(Router);
+    toastr = inject(ToastrService);
     onClick(){
       this.router.navigate(['/terms']);
     }
+    form = new FormGroup({
+      email: new FormControl('',{validators:[Validators.required, Validators.email] }),
+    });
+    onSubmit() {
+      const savedLanguage = localStorage.getItem('language');
+      let successMessage = 'You subscribed successfully!';
+      let success = 'Success!';
+      let errorMessage = 'Subscribtion Failed!';
+      let err = 'Error';
+
+      if (savedLanguage === 'ka') {
+        successMessage = 'გამოწერა გააქტიურებულია!';
+        success = 'მადლობა!';
+        err = "შეცდომა";
+        errorMessage = "გამოწერა ვერ მოხერხდა!"
+      }
+    if (this.form.valid) {
+      console.log("sucesss")
+      this.toastr.success(successMessage, success, {
+        toastClass: 'ngx-toastr custom-toastr',
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right'
+      });
+      this.form.reset();
+    } else {
+      this.toastr.error(errorMessage, err, {
+        toastClass: 'ngx-toastr custom-toastr',
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right'
+      });
+    }
+  }
 }

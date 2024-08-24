@@ -101,7 +101,7 @@
                                     <fa-icon style="color: white;" [icon]="faUser"></fa-icon>
                                 </div>
                                 @if (form.controls.name.touched && form.controls.name.invalid) {
-                                    <p style="color: red;">*Name cannot be empty!</p>
+                                    <p style="color: red;">*{{'Error.Name' | translate}}!</p>
                                 }
                             </div>
                             
@@ -113,7 +113,7 @@
                                     <fa-icon style="color: white;" [icon]="faEnvelope"></fa-icon>
                                 </div>
                                 @if (form.controls.email.touched && form.controls.email.invalid) {
-                                    <p style="color: red;">*Email must be in correct format!</p>
+                                    <p style="color: red;">*{{'Error.Email' | translate}}!</p>
                                 }
                             </div>
                             
@@ -125,7 +125,7 @@
                                     <fa-icon style="color: white;" [icon]="faTextArea"></fa-icon>
                                 </div>
                                 @if (form.controls.message.touched && form.controls.message.invalid) {
-                                    <p style="color: red;">*Message cannot be empty!</p>
+                                    <p style="color: red;">*{{'Error.Message' | translate}}</p>
                                 }
                             </div>
                         </div>

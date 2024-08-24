@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAreaChart, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons';
 import { trigger, style, animate, transition, keyframes } from '@angular/animations';
 import { TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
+import { Toast, ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -33,7 +33,7 @@ export class ContactComponent {
     name: new FormControl('',Validators.required),
     message: new FormControl('', Validators.required),
   });
-  constructor(private toastr: ToastrService) {}
+  toastr = inject(ToastrService);
 
   onSubmit() {
       const savedLanguage = localStorage.getItem('language');

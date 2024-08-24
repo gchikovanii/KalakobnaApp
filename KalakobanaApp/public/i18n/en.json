@@ -36,5 +36,10 @@
     "NotFound": {
         "NotFound": "Page Not Found",
         "BackToHome": "Back to Home"
+    },
+    "Error":{
+        "Email":"Email must be in correct format",
+        "Name": "Name cannot be empty",
+        "Message": "Message cannot be empty!"
     }
 }

@@ -11,11 +11,29 @@
   font-size: 22px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 9999;
+  animation: pulse 1s ease-in-out;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .scroll-to-top-button:hover {
-  background-color: #21004B; /* Darker indigo on hover */
-  transform: scale(1.1); /* Slightly enlarge the button */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+  background-color: #21004B; 
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
+}
+@keyframes pulse {
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

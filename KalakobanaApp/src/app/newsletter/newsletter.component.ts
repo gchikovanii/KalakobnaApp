@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-newsletter',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './newsletter.component.html',
   styleUrl: './newsletter.component.css',
   animations: [
@@ -18,4 +19,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class NewsletterComponent {
 
+
+    constructor(private router: Router){}
+    onClick(){
+      this.router.navigate(['/terms']);
+    }
 }

@@ -43,26 +43,26 @@
 
 @media (max-width: 768px) {
   .not-found-image {
-    max-width: 60%; /* Make the image slightly larger on smaller screens */
+    max-width: 60%; 
   }
 
   .back-home-button {
-    padding: 8px 16px; /* Adjust button size */
+    padding: 8px 16px; 
     font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
   .not-found-container {
-    padding: 10px; /* Reduce padding on very small screens */
+    padding: 10px; 
   }
 
   .not-found-image {
-    max-width: 80%; /* Make the image even larger on very small screens */
+    max-width: 80%; 
   }
 
   .back-home-button {
-    padding: 6px 12px; /* Further adjust button size */
+    padding: 6px 12px; 
     font-size: 12px;
   }
 }

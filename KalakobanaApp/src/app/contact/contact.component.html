@@ -42,7 +42,7 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-lg font-medium leading-6 text-white">{{'Contact.Contact' | translate}}</h3>
                                 <p class="text-gray-300">{{'Contact.Mobile' | translate}}: +995 (574) 093-134</p>
-                                <p class="text-gray-300">{{'Contact.Em' | translate}}: wisebuzzer gmail.com</p>
+                                <p class="text-gray-300">{{'Contact.Em' | translate}}: wisebuzzer&#64;gmail.com</p>
                             </div>
                         </li>
                         <li class="flex">
@@ -62,31 +62,79 @@
                 </div>
                 <div style="background-color: #19112e;" class="card p-8 rounded-lg shadow-lg">
                     <h2 class="mb-4 text-2xl font-bold text-white">{{'Contact.Ready' | translate}}</h2>
-                    <form id="contactForm">
+                    <!-- <form (ngSubmit)="onSubmit()" [formGroup]="form" id="contactForm">
                         <div class="space-y-6">
                             <div class="relative">
-                                <input type="text" id="name" autocomplete="given-name" placeholder="{{'Contact.name' | translate}}" class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent p-4 text-white placeholder-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 moveinput">
+                                <input formControlName="name" type="text" id="name" autocomplete="given-name" placeholder="{{'Contact.name' | translate}}" class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent p-4 text-white placeholder-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 moveinput">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <fa-icon style="color: white;" [icon]="faUser"></fa-icon>
                                 </div>
                             </div>
                             <div class="relative">
-                                <input type="email" id="email" autocomplete="email" placeholder="{{'Contact.email' | translate}}" class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent p-4 text-white placeholder-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 moveinput">
+                                <input  formControlName="email" type="email" id="email" autocomplete="email" placeholder="{{'Contact.email' | translate}}" class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent p-4 text-white placeholder-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 moveinput">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <fa-icon style="color: white;" [icon]="faEnvelope"></fa-icon>
                                 </div>
+                                
                             </div>
+                            @if(form.controls.email.touched && form.controls.email.dirty && form.controls.email.invalid){
+                                <p style="color: red;">*Email Must be in correct format!</p>
+                            }
                             <div class="relative">
-                                <textarea id="textarea" name="textarea" cols="30" rows="5" placeholder="{{'Contact.writeMessage' | translate}}" class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent p-4 text-white placeholder-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 moveinput"></textarea>
+                                <textarea  formControlName="message" id="textarea" name="textarea" cols="30" rows="5" placeholder="{{'Contact.writeMessage' | translate}}" class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent p-4 text-white placeholder-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 moveinput"></textarea>
                                 <div class="absolute inset-y-0 left-0 pl-3 pt-3 flex items-start pointer-events-none">
                                     <fa-icon style="color: white;" [icon]="faTextArea"></fa-icon>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="mt-4 w-full rounded-lg p-4 text-white bg-indigo-600 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
+                        <button type="submit"  class="mt-4 w-full rounded-lg p-4 text-white bg-indigo-600 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
+                            {{'Contact.sendMessage' | translate}}
+                        </button>
+                    </form> -->
+                    <form (ngSubmit)="onSubmit()" [formGroup]="form" id="contactForm">
+                        <div class="space-y-6">
+                            <div class="relative">
+                                <input formControlName="name" type="text" id="name" autocomplete="given-name" placeholder="{{'Contact.name' | translate}}" 
+                                       class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent p-4 text-white placeholder-gray-400 
+                                       focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 moveinput">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <fa-icon style="color: white;" [icon]="faUser"></fa-icon>
+                                </div>
+                                @if (form.controls.name.touched && form.controls.name.invalid) {
+                                    <p style="color: red;">*Name cannot be empty!</p>
+                                }
+                            </div>
+                            
+                            <div class="relative">
+                                <input formControlName="email" type="email" id="email" autocomplete="email" placeholder="{{'Contact.email' | translate}}" 
+                                       class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent p-4 text-white placeholder-gray-400 
+                                       focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 moveinput">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <fa-icon style="color: white;" [icon]="faEnvelope"></fa-icon>
+                                </div>
+                                @if (form.controls.email.touched && form.controls.email.invalid) {
+                                    <p style="color: red;">*Email must be in correct format!</p>
+                                }
+                            </div>
+                            
+                            <div class="relative">
+                                <textarea formControlName="message" id="textarea" name="textarea" cols="30" rows="5" placeholder="{{'Contact.writeMessage' | translate}}" 
+                                          class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent p-4 text-white placeholder-gray-400 
+                                          focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 moveinput"></textarea>
+                                <div class="absolute inset-y-0 left-0 pl-3 pt-3 flex items-start pointer-events-none">
+                                    <fa-icon style="color: white;" [icon]="faTextArea"></fa-icon>
+                                </div>
+                                @if (form.controls.message.touched && form.controls.message.invalid) {
+                                    <p style="color: red;">*Message cannot be empty!</p>
+                                }
+                            </div>
+                        </div>
+                        <button type="submit" class="mt-4 w-full rounded-lg p-4 text-white bg-indigo-600 hover:bg-indigo-800 
+                                focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
                             {{'Contact.sendMessage' | translate}}
                         </button>
                     </form>
+                    
                 </div>
             </div>
         </div>

@@ -1,0 +1,68 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.not-found-image {
+  max-width: 40%; 
+  height: 60%;
+  animation: float 3s ease-in-out infinite; 
+}
+
+.back-home-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-home-button:hover {
+  background-color: #3700b3;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .not-found-image {
+    max-width: 60%; /* Make the image slightly larger on smaller screens */
+  }
+
+  .back-home-button {
+    padding: 8px 16px; /* Adjust button size */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-container {
+    padding: 10px; /* Reduce padding on very small screens */
+  }
+
+  .not-found-image {
+    max-width: 80%; /* Make the image even larger on very small screens */
+  }
+
+  .back-home-button {
+    padding: 6px 12px; /* Further adjust button size */
+    font-size: 12px;
+  }
+}

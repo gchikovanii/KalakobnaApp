@@ -4,8 +4,8 @@
         <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">{{'Hero.Leading' | translate}}</h1>
         <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{{'Hero.Buzzing' | translate}}</p>
         <div class="flex flex-col sm:flex-row sm:space-x-4">
-        <button type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm sm:text-base px-5 py-2.5 text-center mb-2 sm:mb-0">{{'Hero.Collaborate' | translate}}</button>
-        <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm sm:text-base px-5 py-2.5 text-center">{{'Hero.Explore' | translate}}</button>
+        <button type="button" (click)="redirectToContact()" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm sm:text-base px-5 py-2.5 text-center mb-2 sm:mb-0">{{'Hero.Collaborate' | translate}}</button>
+        <button type="button" (click)="redirectTo()" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm sm:text-base px-5 py-2.5 text-center">{{'Hero.Explore' | translate}}</button>
     </div>
     </div>
     <div class="lg:mt-0 lg:col-span-5 flex justify-center mt-4">

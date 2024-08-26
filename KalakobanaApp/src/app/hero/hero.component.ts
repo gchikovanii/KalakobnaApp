@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { TranslateModule } from '@ngx-translate/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -18,5 +19,11 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
 })
 export class HeroComponent {
-
+  router = inject(Router);
+  redirectToContact(){
+    this.router.navigate(['/contact']);
+  }
+  redirectTo(){
+    this.router.navigate(['/game-hub']);
+  }
 }

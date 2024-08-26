@@ -27,7 +27,7 @@
         "GameHub":"Welcome to the Game Hub",
         "Expl":"Explore our latest games! Click on any game below to start playing or discover upcoming releases. Stay tuned for more exciting adventures.",
         "Kalakobana":"Kalakobana",
-        "DiveInto": "Dive into the adventure of Kalakoabana, a thrilling game filled with mysteries and challenges.",
+        "DiveInto": "We are excited to introduce our inaugural project, Kalakobana. This digital version of a classic Georgian trivia game invites players to think creatively as they name items based on a randomly chosen letter from the Georgian alphabet. From names and cities to plants and movies, each round promises creativity and fun!",
         "Play": "Play Now",
         "Conq": "Conquer the World",
         "ComingSoon": "Coming Soon... Stay tuned for the next exciting game release!",
@@ -43,46 +43,46 @@
         "Message": "Message cannot be empty!"
     },
     "Hero":{
-        "Leading":"Leading company",
-        "Buzzing":"Buzzing for your pleasure from the heart of Tbilisi, Georgia, where tradition meets innovation. We are creating historical games that blend education with fun, leveling up the learning experience for everyone.",
+        "Leading":"Who We Are?!",
+        "Buzzing":"Wise Buzzer is an innovative startup dedicated to merging education with entertainment. Our mission is to transform the way people engage with knowledge through fun and interactive games. Inspired by the idea of spreading positivity and wisdom, we aim to deliver enriching experiences through our apps.",
         "Collaborate": "Collaborate",
         "Explore":"Explore Games"
     },
     "Pluses":{
-        "Best":"Why are we the best?",
-        "UL":"We Build a ProJects That our users Love",
-        "OT":"Our templates allow for maximum customization. No technical skills required – our intuitive design tools let you get the job done easily.",
-        "FL":"Flexible",
-        "FLT":"We are using modern approaches which are implemented in businesses around 20 years ago and its it!",
-        "FP":"Fast Performance",
-        "FPT":"We build our templates for speed in mind, for super-fast load times so your customers never waver",
-        "FF":"Fully Featured",
-        "FFT":"Everything you need to succeed and launch your landing page, right out of the box. No need to install anything else."
+        "Best":"Why Choose Wise Buzzer?",
+        "UL":"We Make Cool and Impressive Stuff",
+        "OT":"At Wise Buzzer, we offer something special for those who love games and learning. Here’s why you should pick us:",
+        "FL":"Fun and Unique Games",
+        "FLT":"Our trivia games are different and exciting. We create fresh challenges and interesting topics that make every game enjoyable",
+        "FP":"Commitment to Education",
+        "FPT":"We blend educational elements with entertaining gameplay, helping players expand their knowledge while having fun.",
+        "FF":"Free Access",
+        "FFT":"All our games will be completely free to play, ensuring that everyone can join in on the fun."
     },
     "AboutUs":{
-        "HWS":"How we started? What is the idea behind Wise Buzzer?",
+        "HWS":"What is the idea behind Wise Buzzer?",
         "ShowMore": "Show More",
         "ShowLess": "Show Less",
-        "ShortText": "Through collaboration, diverse perspectives and strengths are leveraged to create inclusive environments where everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement but also strengthens the fabric of society...",
-        "fullText": "Through collaboration, diverse perspectives and strengths are leveraged to create inclusive environments where everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement but also strengthens the fabric of society."
+        "ShortText": "Our vision is to turn learning into a fun experience for everyone. We aim to design games that help players discover new things while having a great time. We believe in creating a space where learning and fun go hand in hand. We aim to combine learning with enjoyment by developing games that engage players and stimulate their minds. ",
+        "fullText": "Our goal is to spread knowledge and positivity while making education fun for everyone. We aim to combine learning with enjoyment by developing games that engage players and stimulate their minds. Our goal is to spread knowledge and positivity while making education fun for everyone. Our mission is to enhance education through fun and interactive gaming experiences. We strive to foster a love for learning and create a supportive community where everyone can thrive."
     },
     "Tech":{
         "T":"Technologies",
-        "TD":"The reason we have high scalable games is because we use modern monster technology stacks, they are reliable and beasts.",
-        "Angular": "Monster in web development.",
-        "Net":"We use .NET Stack for back-end development.",
-        "Flutter":"Cross platform mobile language.",
-        "DB":"We use both RMDBS and No Sql.",
-        "SS":"We use High standard of security.",
-        "Azure":"We use Azure hosting."
+        "TD":"We build highly scalable games using cutting-edge technology stacks that are both powerful and reliable. They truly are the backbone of our success!",
+        "Angular": "A powerhouse for building dynamic web apps.",
+        "Net":"Our trusted tool for building strong back-end systems.",
+        "Flutter":"Perfect for creating smooth cross-platform mobile apps.",
+        "DB":"We utilize both relational and NoSQL databases.",
+        "SS":"We uphold the latest security standards to keep everything safe.",
+        "Azure":"Our choice for reliable hosting solutions."
     },
     "Crew":{
         "OC":"Our Crew Captains",
-        "OCT":"The heart of company on which the whole idea stands",
+        "OCT":"The driving force behind our company and the foundation of our vision",
         "GC": "Giorgi Chikovani",
-        "GCT":"Giorgi drives the technical strategy of the Wise Buzzer platform and Tenchnology Stack.",
+        "GCT":"Giorgi drives the technical strategy for the Wise Buzzer platform and manages the technology stack, focusing on innovation and excellence in software development.",
         "LJ": "Luka Jolokhava",
-        "LJT":"Luka drives the technical strategy of the Wise Buzzer platform and brand."
+        "LJT":"As co-founder and CTO, Luka is the creative force behind the Wise Buzzer platform and brand. He drives the technical strategy and inspires the team with innovative ideas."
     },
     "NewsLetter":{
         "S": "Sign up for our newsletter",

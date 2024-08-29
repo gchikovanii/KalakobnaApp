@@ -1,0 +1,19 @@
+.image-container-r img {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .image-container-r:hover img {
+    transform: scale(1.05) rotate(3deg);
+  }
+
+  .image-container img {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.05) rotate(-3deg); 
+  }
+

@@ -1,3 +1,7 @@
 .moveinput{
     text-indent: 3ch;
 }
+a,p,button, h4{
+    font-family: 'Poppins', sans-serif;
+  font-style: italic;
+}

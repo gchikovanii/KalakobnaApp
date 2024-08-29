@@ -43,8 +43,8 @@ export class ContactComponent {
       let err = 'Error';
 
       if (savedLanguage === 'ka') {
-        successMessage = 'შეტყობინება წარმატებით გაიგზავნა!';
-        success = 'წარმატებით გაიგზავნა!';
+        successMessage = 'თქვენი შეტყობინება მიღებულია!';
+        success = 'გაიგზავნა!';
         err = "შეცდომა";
         errorMessage = "თქვენი შეტყობინება მიღებულია!"
       }

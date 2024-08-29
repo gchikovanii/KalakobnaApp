@@ -1,8 +1,9 @@
-import { Component, ElementRef, EventEmitter, HostListener, Output, signal } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, inject, Output, signal } from '@angular/core';
 import { HeroComponent } from "../hero/hero.component";
 import { NewsletterComponent } from "../newsletter/newsletter.component";
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
     selector: 'app-navbar',
@@ -47,8 +48,6 @@ export class NavbarComponent {
       this.closeDropdown();
     }
   }
-
-  
   dropdownOpen = false;
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
@@ -75,4 +74,22 @@ export class NavbarComponent {
   handleOutsideClick() {
     this.profileMenu = false;
   }
+
+  router = inject(Router);
+
+  redirectToContact(){
+    this.router.navigate(['/contact']);
+    this.isMenuOpen.set(false);
+
+  }
+  redirectToMain(){
+    this.router.navigate(['/']);
+    this.isMenuOpen.set(false);
+
+  }
+  redirectToGame(){
+    this.router.navigate(['/game-hub']);
+    this.isMenuOpen.set(false);
+  }
+
 }

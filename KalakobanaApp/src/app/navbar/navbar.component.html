@@ -92,9 +92,9 @@
         <div class="mt-12 flow-root">
           <div class="-my-6 divide-y divide-white-500/10">
             <div class="space-y-2 py-6">
-              <a routerLink="/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">{{'Header.Main' | translate}}</a>
-              <a routerLink="/game-hub" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">{{'Header.GameHub' | translate}}</a>
-              <a routerLink="/contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">{{'Header.Contact' | translate}}</a>
+              <a (click)="redirectToMain()"  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">{{'Header.Main' | translate}}</a>
+              <a (click)="redirectToGame()" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">{{'Header.GameHub' | translate}}</a>
+              <a (click)="redirectToContact()" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white nav-text-sm">{{'Header.Contact' | translate}}</a>
             </div>
             <div class="py-6">
               <div class="flex justify-between items-center">
@@ -132,14 +132,6 @@
                  }
                 </div>
               </div>
-
-              <!-- @if(!loggedIn()){
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white zoom-out" (click)="login()">Account <span aria-hidden="true">&rarr;</span></a>
-              }
-              @if(loggedIn()){
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white zoom-in">Profile</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white zoom-in" (click)="logOut()">Log Out</a>
-              } -->
             </div>
           </div>
         </div>

@@ -16,11 +16,11 @@ export class NavbarComponent {
   isMenuOpen = signal(false);
   loggedIn = signal(false);
   profileMenu = false;
-  savedLanguage = signal('ქართული');
+  savedLanguage = signal('English');
 
   constructor(private translate: TranslateService) {
     const savedLanguage = localStorage.getItem('language');
-    const defaultLanguage = savedLanguage ? savedLanguage : 'ka';
+    const defaultLanguage = savedLanguage ? savedLanguage : 'en';
 
     this.updateSavedLanguage(defaultLanguage);
     this.translate.setDefaultLang(defaultLanguage);

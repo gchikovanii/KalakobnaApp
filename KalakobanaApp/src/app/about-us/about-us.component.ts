@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { trigger, style, animate, transition, keyframes } from '@angular/animations';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-about-us',
@@ -20,15 +21,25 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   ],
 })
 export class AboutUsComponent {
-  // shortText: string = 'Through collaboration, diverse perspectives and strengths are leveraged to create inclusive environments where everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement but also strengthens the fabric of society...';
-  // fullText: string = this.shortText + ' Through collaboration, diverse perspectives and strengths are leveraged to create inclusive environments where everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement but also strengthens the fabric of society.';
   shortText: string = '';
   fullText: string = '';
 
   isTextExpanded: boolean = false;
   isVisible = false;
-  constructor(
-    private translate: TranslateService) {
+  translateSubscription: Subscription;
+
+  constructor(private translate: TranslateService) {
+    // Initial text loading
+    this.loadTranslations();
+
+    // Subscribe to language change event to update text dynamically
+    this.translateSubscription = this.translate.onLangChange.subscribe(() => {
+      this.loadTranslations();
+    });
+  }
+
+  // Function to load translations
+  loadTranslations() {
     this.translate.get('AboutUs.ShortText').subscribe((translation: string) => {
       this.shortText = translation;
     });
@@ -37,6 +48,15 @@ export class AboutUsComponent {
       this.fullText = this.shortText + translation;
     });
   }
+
+  // Clean up subscription to avoid memory leaks
+  ngOnDestroy() {
+    if (this.translateSubscription) {
+      this.translateSubscription.unsubscribe();
+    }
+  }
+
+
   el = inject(ElementRef);
   @HostListener('window:scroll', [])
   onWindowScroll() {
